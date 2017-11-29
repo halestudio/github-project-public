@@ -7,7 +7,7 @@ mkdir www;
 
 rm _data.json
 # run projects.js to pull the latest data from github Project
-node projects.js bionode | \
+node projects.js halestudio | \
   jq -s 'group_by(.column_name) |
     map( { (.[0].column_name|tostring) : .  }) |
     add |
@@ -30,7 +30,7 @@ git init
 
 # inside this git repo we'll pretend to be a new user
 git config user.name "Travis CI"
-git config user.email "travis@bmpvieira.com"
+git config user.email "travis@hale-studio.org"
 
 # The first and only commit to this new Git repo contains all the
 # files present with the commit message "Deploy to GitHub Pages".
