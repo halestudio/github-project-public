@@ -12,9 +12,8 @@ node projects.js halestudio | \
     map( { (.[0].column_name|tostring) : .  }) |
     add |
     {
-      Backlog: .Backlog,
-      Next: .Next,
-      "In Progress": ."In Progress",
+      "To do": ."To do",
+      "In progress": ."In progress",
       Done: .Done
     }' \
   > _data.json
